@@ -6,7 +6,7 @@ const Form = () => {
     const nameRef = useRef(null);
     const ageRef = useRef(null);
 
-    const submitHandler = async (event) => {
+    const submitHandler = (event) => {
         event.preventDefault();
         const data = {
             name: nameRef.current ? nameRef.current.value : "",

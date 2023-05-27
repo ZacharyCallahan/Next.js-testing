@@ -1,6 +1,7 @@
 import Search from "./components/Search";
 import axios from "axios";
 export default async function Home({ searchParams }) {
+  
   const search = searchParams.search || "";
   const page = parseInt(searchParams.page) || 1;
   const limit = 10;
