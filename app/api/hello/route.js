@@ -2,12 +2,13 @@ import { mongooseConnect } from "@/utils/mongoose";
 import { Cat } from "@/models/Cat";
 export async function GET() {
     await mongooseConnect()
-    const cats = await Cat.find();``
+    const cats = await Cat.find();
     return new Response(JSON.stringify(cats));
 }
-a
+
 export async function POST(request) {
     const body = await request.json();
+    await mongooseConnect()
     const newCat = new Cat(body);
     await newCat.save();
 
