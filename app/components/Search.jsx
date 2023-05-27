@@ -25,7 +25,7 @@ const Search = () => {
     return (
         <>
             <input className=" ring-black ring-2" type="text" placeholder="search" onChange={handleSearch} />
-            {isPending && <div>Loading...</div>}
+            {isPending && <div className="text-green-500">Searching... May take a second!</div>}
         </>
     );
 }
