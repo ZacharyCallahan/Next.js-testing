@@ -14,3 +14,15 @@ export async function POST(request) {
 
     return new Response(JSON.stringify(newCat));
 }
+
+export async function PUT(request) {
+
+    const body = await request.json();
+
+    const updatedCat = new Cat(body)
+
+    await updatedCat.findByIdAndUpdate(id, updatedCat, {new: true})
+
+
+    return new Response(JSON.stringify())
+}
